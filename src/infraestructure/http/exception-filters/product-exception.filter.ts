@@ -1,3 +1,11 @@
+import {
+  ArgumentsHost,
+  Catch,
+  ExceptionFilter,
+  HttpStatus,
+  Logger,
+} from '@nestjs/common';
+
 @Catch(ProductApplicationError)
 export class ProductCreatorFilter implements ExceptionFilter {
   catch(exception: ProductApplicationError, host: ArgumentsHost) {
